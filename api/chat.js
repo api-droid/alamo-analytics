@@ -14,7 +14,7 @@
 //    OPENAI_API_KEY      → chave da OpenAI     (sk-...)
 //
 //  Modelos usados automaticamente por provedor:
-//    Groq      → llama-3.3-70b-versatile  (gratuito)
+//    Groq      → openai/gpt-oss-120b      (gratuito)
 //    Anthropic → claude-haiku-4-5-20251001 (mais barato)
 //    OpenAI    → gpt-4o-mini              (mais barato)
 // ============================================================
@@ -56,7 +56,7 @@ export default async function handler(req, res) {
           'Authorization': `Bearer ${key}`
         },
         body: JSON.stringify({
-          model: 'llama-3.3-70b-versatile',
+          model: 'openai/gpt-oss-120b',
           messages: msgs,
           max_tokens,
           temperature: 0.4
